@@ -11,6 +11,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <header class="site-header">
+      <a class="site-title" href="#top">Multi-Agent Physical AI</a>
+      <nav class="top-nav" aria-label="Primary navigation">
+        <a href="#overview">Overview</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#cfp">Call for Papers</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#organizers">Organizers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
     <main id="top">
       <section class="hero" aria-labelledby="page-title">
         <img src="assets/hero-original.png" alt="" />
@@ -23,85 +35,186 @@
             <p>📍 Austin, Texas, US</p>
             <p>Half-Day Workshop @ Conference on Robot Learning</p>
           </div>
-          <nav class="hero-links" aria-label="Section links">
-            <a href="#overview">Overview</a>
-            <a href="#speakers">Speakers</a>
-            <a href="#organizers">Organizers</a>
-          </nav>
         </div>
       </section>
 
       <section id="overview" class="section overview-section">
-        <h2>Workshop Overview</h2>
+        <h2>Overview</h2>
         <div class="overview-card">
+          <h3>Introduction</h3>
           <p>
-            Physical AI systems are increasingly deployed as populations rather than isolated
-            robots: autonomous vehicle fleets, warehouse robots, aerial delivery systems, and
-            collaborative manipulation platforms. This workshop asks when multi-agent structure
-            must shape the design of embodied AI systems, and when single-agent scaling is enough.
+            Physical AI systems are embodied agents acting in the physical world: robots, vehicles,
+            drones, and other systems that sense, decide, and act under real-world constraints. As
+            these systems scale from isolated robots to deployed populations, interaction becomes a
+            first-order concern rather than a detail of the environment.
           </p>
           <p>
-            We bring together researchers in robot learning, multi-agent systems, autonomous
-            driving, robot foundation models, and population-scale deployment to discuss the
-            theories, algorithms, benchmarks, and system designs needed for multi-agent physical AI.
+            Robotaxi fleets, warehouse robots, aerial delivery systems, and collaborative
+            manipulation platforms already reveal population-level phenomena such as congestion,
+            deadlock, oscillation, coordination failure, and social dilemmas. This workshop asks a
+            central question: can the multi-agent problem be deferred until single-agent capability
+            matures, or must it shape physical AI from the beginning?
           </p>
+          <p>
+            We bring together researchers and practitioners in robot learning, autonomous driving,
+            warehouse and logistics robotics, aerial systems, collaborative manipulation, foundation
+            models, and multi-agent learning to build a shared map of the challenges and
+            opportunities at this intersection.
+          </p>
+          <h3>We will explore the following focused research questions:</h3>
           <div class="theme-grid">
             <article>
-              <h3>Theme 1: From single-agent scaling to population behavior</h3>
-              <p>When do generalist robot policies transfer to coordinated multi-agent settings?</p>
+              <h3>Does single-robot scaling deliver multi-agent competence?</h3>
+              <p>
+                If data and generalist policies produce broad capability, does coordinated
+                population behavior emerge from the same recipe?
+              </p>
             </article>
             <article>
-              <h3>Theme 2: Coordination in shared physical spaces</h3>
-              <p>How should agents coordinate when objectives, ownership, and information differ?</p>
+              <h3>Centralized or decentralized at deployment scale?</h3>
+              <p>
+                When is a robot population best treated as one high-dimensional controller, and
+                when is it genuinely a multi-agent system?
+              </p>
             </article>
             <article>
-              <h3>Theme 3: Benchmarks, simulation, and deployment</h3>
-              <p>What measurements capture fleet-level safety, throughput, deadlock, and emergence?</p>
+              <h3>Coordination under misaligned objectives</h3>
+              <p>
+                What can incentive design, mechanism design, or light-touch control achieve when
+                agents with different owners share physical space?
+              </p>
             </article>
             <article>
-              <h3>Theme 4: Incentives, mechanisms, and shared autonomy</h3>
-              <p>What coordination mechanisms are practical when agents have different owners or objectives?</p>
+              <h3>Simulation, benchmarks, and sim-to-real for populations</h3>
+              <p>
+                What simulators, metrics, and transfer methods let the community measure
+                population-scale safety, throughput, and emergent behavior?
+              </p>
             </article>
-          </div>
-          <div class="cfp-note">
-            <h3>Call for Papers</h3>
-            <p>
-              We invite short papers up to 4 pages plus references on new, preliminary, or
-              in-progress work in multi-agent and population-scale robot learning. Submissions will
-              be reviewed double-blind; accepted papers will be presented as short talks or posters.
-            </p>
           </div>
         </div>
       </section>
 
       <section id="speakers" class="section people-section tinted">
         <h2>Invited Speakers and Panelists</h2>
-        <div class="people-grid">
-          <article class="person-card">
-            <img class="person-photo" src="https://people.eecs.berkeley.edu/~svlevine/images/portrait_lab_small.png" alt="Sergey Levine" />
-            <a class="person-name" href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
-            <p>Associate Professor, UC Berkeley</p>
+        <div class="speaker-list">
+          <article class="speaker-card">
+            <img class="speaker-photo" src="https://people.eecs.berkeley.edu/~svlevine/images/portrait_lab_small.png" alt="Sergey Levine" />
+            <div>
+              <a class="speaker-name" href="https://people.eecs.berkeley.edu/~svlevine/">Sergey Levine</a>
+              <p class="speaker-role">Associate Professor, UC Berkeley</p>
+              <p>
+                Sergey Levine anchors the single-robot scaling perspective. His work on robot
+                learning, reinforcement learning, and generalist policies helps frame whether
+                scaling data and models can produce multi-agent competence, or whether interaction
+                must be treated as a distinct design axis.
+              </p>
+            </div>
           </article>
-          <article class="person-card">
-            <img class="person-photo" src="https://www.cs.utexas.edu/~pstone/images/Peter_Headshot_2019.png" alt="Peter Stone" />
-            <a class="person-name" href="https://www.cs.utexas.edu/~pstone/">Peter Stone</a>
-            <p>Professor, UT Austin / Sony AI</p>
+          <article class="speaker-card">
+            <img class="speaker-photo" src="https://www.cs.utexas.edu/~pstone/images/Peter_Headshot_2019.png" alt="Peter Stone" />
+            <div>
+              <a class="speaker-name" href="https://www.cs.utexas.edu/~pstone/">Peter Stone</a>
+              <p class="speaker-role">Professor, UT Austin / Sony AI</p>
+              <p>
+                Peter Stone brings foundations of multi-agent systems, including teamwork,
+                learning, and coordination among agents without complete shared information. His
+                perspective connects core multi-agent theory with deployment-facing questions in
+                robotics and AI systems.
+              </p>
+            </div>
           </article>
-          <article class="person-card">
-            <img class="person-photo" src="https://dorsa.fyi/dorsasadigh.jpeg" alt="Dorsa Sadigh" />
-            <a class="person-name" href="https://dorsa.fyi/">Dorsa Sadigh</a>
-            <p>Associate Professor, Stanford University</p>
+          <article class="speaker-card">
+            <img class="speaker-photo" src="https://dorsa.fyi/dorsasadigh.jpeg" alt="Dorsa Sadigh" />
+            <div>
+              <a class="speaker-name" href="https://dorsa.fyi/">Dorsa Sadigh</a>
+              <p class="speaker-role">Associate Professor, Stanford University</p>
+              <p>
+                Dorsa Sadigh works on interaction-aware robotics, human-robot interaction, and
+                coordination with agents whose objectives may differ. Her perspective is central to
+                understanding shared physical spaces, misaligned objectives, and interactive robot
+                behavior.
+              </p>
+            </div>
           </article>
-          <article class="person-card">
-            <img class="person-photo" src="https://liuziwei7.github.io/homepage_files/me.png" alt="Ziwei Liu" />
-            <a class="person-name" href="https://liuziwei7.github.io/">Ziwei Liu</a>
-            <p>Assistant Professor, Nanyang Technological University</p>
+          <article class="speaker-card">
+            <img class="speaker-photo" src="https://liuziwei7.github.io/homepage_files/me.png" alt="Ziwei Liu" />
+            <div>
+              <a class="speaker-name" href="https://liuziwei7.github.io/">Ziwei Liu</a>
+              <p class="speaker-role">Assistant Professor, Nanyang Technological University</p>
+              <p>
+                Ziwei Liu brings expertise in visual foundation models, generative world models,
+                and embodied AI. His work helps connect large-scale perception and simulation to
+                population-scale physical behavior and multi-agent evaluation.
+              </p>
+            </div>
           </article>
-          <article class="person-card">
-            <img class="person-photo" src="people/boyi.jpg" alt="Boyi Li" />
-            <a class="person-name" href="#">Boyi Li</a>
-            <p>NVIDIA</p>
+          <article class="speaker-card">
+            <img class="speaker-photo" src="people/boyi.jpg" alt="Boyi Li" />
+            <div>
+              <a class="speaker-name" href="https://sites.google.com/site/boyilics/home">Boyi Li</a>
+              <p class="speaker-role">NVIDIA</p>
+              <p>
+                Boyi Li brings an industry perspective on embodied AI systems, simulation, and
+                deployment-scale infrastructure. The panel will use this perspective to connect
+                research questions with the practical constraints of building and evaluating robot
+                populations.
+              </p>
+            </div>
           </article>
+        </div>
+      </section>
+
+      <section id="cfp" class="section cfp-section">
+        <h2>Call for Papers</h2>
+        <div class="cfp-content">
+          <p>
+            We invite short papers on new, preliminary, or in-progress work at the intersection of
+            multi-agent systems and physical AI. The workshop is intended as a venue for early
+            ideas, position papers, benchmarks, systems, and deployment lessons that can help the
+            community understand when multi-agent structure matters for embodied AI.
+          </p>
+
+          <h3>Areas of Interest</h3>
+          <p>Topics of interest include, but are not limited to:</p>
+          <ul>
+            <li>Multi-agent and population-scale robot learning</li>
+            <li>Scaling single-agent robot policies to coordinated population behavior</li>
+            <li>Centralized versus decentralized control for deployed robot populations</li>
+            <li>Coordination, incentives, and mechanism design under misaligned objectives</li>
+            <li>Foundation models, world models, and generalist policies for multi-agent physical AI</li>
+            <li>Simulation, benchmarks, sim-to-real transfer, and fleet-level safety or throughput evaluation</li>
+          </ul>
+
+          <h3>Submission Guidelines</h3>
+          <ul>
+            <li>Submissions should be up to 4 pages, excluding references.</li>
+            <li>Submissions may describe new results, preliminary work, negative results, benchmarks, systems, or position papers.</li>
+            <li>Reviews will be double-blind and handled through OpenReview.</li>
+            <li>Work already accepted to the main CoRL 2026 conference will not be accepted to the workshop.</li>
+            <li>Accepted papers will be presented as short oral talks or posters. Top-rated accepted papers will be invited for contributed oral presentations.</li>
+            <li>A sponsor-backed best paper award will be presented during the closing session.</li>
+          </ul>
+
+          <h3>Important Dates</h3>
+          <ul class="date-list">
+            <li><strong>Submission deadline:</strong> TBD</li>
+            <li><strong>Author notification:</strong> TBD</li>
+            <li><strong>Camera-ready deadline:</strong> TBD</li>
+            <li><strong>Workshop date:</strong> TBD</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="schedule" class="section schedule-section tinted">
+        <h2>Workshop Schedule</h2>
+        <div class="schedule-list">
+          <article><time>10 min</time><p>Opening and framing: central question and core challenges</p></article>
+          <article><time>120 min</time><p>Invited position statements from invited speakers</p></article>
+          <article><time>40 min</time><p>Moderated panel discussion and audience Q&amp;A</p></article>
+          <article><time>30 min</time><p>Contributed paper oral presentations</p></article>
+          <article><time>30 min</time><p>Poster and coffee session</p></article>
+          <article><time>15 min</time><p>Best paper award and closing synthesis</p></article>
         </div>
       </section>
 
@@ -110,27 +223,27 @@
         <div class="people-grid organizers">
           <article class="person-card">
             <img class="person-photo" src="https://viterbi.usc.edu/directory/images/1b25523a6dea5345af5660b3bd2a8b7a.jpg" alt="Ruolin Li" />
-            <a class="person-name" href="mailto:ruolinl@usc.edu">Ruolin Li</a>
+            <a class="person-name" href="https://ruolinli.me/ruolin-li">Ruolin Li</a>
             <p>University of Southern California</p>
           </article>
           <article class="person-card">
             <img class="person-photo" src="https://images.squarespace-cdn.com/content/v1/54628adae4b0f587f5d3e03f/73d27742-11e5-45c1-b811-9c13cace1ed2/Chen%2BTang.jpg" alt="Chen Tang" />
-            <a class="person-name" href="mailto:ctangac@ucla.edu">Chen Tang</a>
+            <a class="person-name" href="https://chentangmark.github.io/">Chen Tang</a>
             <p>University of California, Los Angeles</p>
           </article>
           <article class="person-card">
             <img class="person-photo" src="people/xudong.jpeg" alt="Xudong Wang" />
-            <a class="person-name" href="#">Xudong Wang</a>
+            <a class="person-name" href="https://people.eecs.berkeley.edu/~xdwang/">Xudong Wang</a>
             <p>Physical Intelligence</p>
           </article>
           <article class="person-card">
             <img class="person-photo" src="https://tasl.ucr.edu/people_photos/jiachenli.jpg" alt="Jiachen Li" />
-            <a class="person-name" href="#">Jiachen Li</a>
+            <a class="person-name" href="https://jiachenli94.github.io/">Jiachen Li</a>
             <p>Georgia Institute of Technology</p>
           </article>
           <article class="person-card">
             <img class="person-photo" src="people/kexin.jpeg" alt="Kexin Wang" />
-            <a class="person-name" href="#">Kexin Wang</a>
+            <a class="person-name" href="https://kexinwang.me/">Kexin Wang</a>
             <p>University of Southern California</p>
           </article>
           <article class="person-card">
@@ -140,9 +253,20 @@
           </article>
           <article class="person-card">
             <img class="person-photo" src="people/shuijing.png" alt="Shuijing Liu" />
-            <a class="person-name" href="#">Shuijing Liu</a>
-            <p>TBD</p>
+            <a class="person-name" href="https://shuijing725.github.io/">Shuijing Liu</a>
+            <p>UT Austin</p>
           </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section tinted">
+        <h2>Contact</h2>
+        <div class="contact-card">
+          <p>
+            For questions about the workshop, submissions, or participation, please contact the
+            organizers.
+          </p>
+          <p><a href="mailto:ruolinl@usc.edu">ruolinl@usc.edu</a> · <a href="mailto:ctangac@ucla.edu">ctangac@ucla.edu</a></p>
         </div>
       </section>
 
